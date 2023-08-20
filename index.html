@@ -28,13 +28,16 @@
     </head>
     <body>
         <!-- HEADER SECTION START  -->
-        <header>
+        <header class="sticky-top bg-warning-subtle">
             <div class="container">
-                <nav class="navbar bg-warning-subtle py-3 fixed-top">
+                <nav class="navbar py-0">
                     <div class="container">
-                        <a class="navbar-brand fw-semibold" href="#"
-                            >Summer Sale</a
-                        >
+                        <a class="navbar-brand fw-semibold p-0" href="#"
+                            ><img
+                                style="width: 100px"
+                                src="./images/logo.png"
+                                alt=""
+                        /></a>
                         <button
                             class="navbar-toggler border-0"
                             type="button"
@@ -91,27 +94,41 @@
         <section class="bg-warning-subtle">
             <div class="container mx-auto">
                 <div
-                    class="d-flex justify-content-between align-items-center py-5"
+                    class="row justify-content-between align-items-center py-5"
                 >
-                    <div class="text-center flex-1">
-                        <h2 class="uppercase text-2xl py-8">
-                            Big Sale Fever!!
-                        </h2>
-                        <h1 class="display-3">
-                            Purchase TK 200 or above & get
-                            <span class="text-pink-500">20% off</span>
-                        </h1>
-                        <p class="py-3">
-                            <span class="fw-semibold pe-3">Use Promo Code</span
-                            ><button
-                                class="btn bg-danger-subtle text-dark fw-semibold"
-                            >
-                                SELL200
-                            </button>
-                        </p>
+                    <div class="col-lg-6">
+                        <div class="text-center flex-1">
+                            <h2 class="uppercase text-2xl py-8">
+                                Big Sale Fever!!
+                            </h2>
+                            <h1 class="display-3">
+                                Purchase TK 200 or above & get
+                                <span class="text-pink-500">20% off</span>
+                            </h1>
+                            <p class="py-2">
+                                <input
+                                    class="fw-semibold mt-2 bg-warning-subtle py-3 m-0 text-center px-3 border border-2 border-danger-subtle"
+                                    type="text"
+                                    id="coupon-code"
+                                    value="SELL200"
+                                />
+                                <button
+                                    onclick="copyCoupon()"
+                                    class="bg-danger-subtle mt-2 border border-2 border-danger-subtle ms-2 py-3 px-4 text-dark fw-semibold"
+                                >
+                                    Copy Code
+                                </button>
+                            </p>
+                        </div>
                     </div>
-                    <div class="flex-1">
-                        <img src="./images/Summer 1.png" alt="" />
+                    <div class="col-lg-6">
+                        <div class="">
+                            <img
+                                src="./images/Summer 1.png"
+                                class="img-fluid"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,422 +138,573 @@
         <main class="bg-slate-100 py-16">
             <!-- SHOP SECTION -->
             <div class="container my-5">
-                <div class="d-flex justify-content-between items-top">
+                <div class="row justify-content-between items-top">
                     <!-- Kitchenware  -->
-                    <div>
-                        <h2 class="text-4xl fw-semibold py-4">Kitchenware</h2>
-                        <div class="d-flex">
-                            <div
-                                class="card rounded-3 border-0 m-2 bg-body-secondary"
-                                style="width: 18rem"
-                            >
-                                <div
-                                    class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
-                                >
-                                    <img
-                                        src="./images/prod1.png"
-                                        class="rounded px-3"
-                                        alt="..."
-                                    />
-                                </div>
-                                <div class="card-body">
-                                    <div class="rating">
-                                        <p class="mb-0 text-warning">
-                                            <i class="fa-solid fa-star"></i
-                                            ><i class="fa-solid fa-star"></i
-                                            ><i class="fa-solid fa-star"></i
-                                            ><i class="fa-regular fa-star"></i
-                                            ><i class="fa-regular fa-star"></i>
-                                        </p>
-                                    </div>
-                                    <div class="">
-                                        <h4
-                                            id="product-name"
-                                            class="card-title pr-14"
-                                        >
-                                            K. Accessories
-                                        </h4>
-                                        <p class="mb-0">
-                                            <span id="price">35.00</span>TK
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="card rounded-3 border-0 m-2 bg-body-secondary"
-                                style="width: 18rem"
-                            >
-                                <div
-                                    class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
-                                >
-                                    <img
-                                        src="./images/prod2.png"
-                                        class="rounded px-3"
-                                        alt="..."
-                                    />
-                                </div>
-                                <div class="card-body">
-                                    <div class="rating">
-                                        <p class="mb-0 text-warning">
-                                            <i class="fa-solid fa-star"></i
-                                            ><i class="fa-solid fa-star"></i
-                                            ><i class="fa-solid fa-star"></i
-                                            ><i class="fa-regular fa-star"></i
-                                            ><i class="fa-regular fa-star"></i>
-                                        </p>
-                                    </div>
-                                    <div class="">
-                                        <h4
-                                            id="product-name"
-                                            class="card-title pr-14"
-                                        >
-                                            K. Accessories
-                                        </h4>
-                                        <p class="mb-0">
-                                            <span id="price">25.00</span>TK
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="card rounded-3 border-0 m-2 bg-body-secondary"
-                                style="width: 18rem"
-                            >
-                                <div
-                                    class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
-                                >
-                                    <img
-                                        src="./images/prod3.png"
-                                        class="rounded px-3"
-                                        alt="..."
-                                    />
-                                </div>
-                                <div class="card-body">
-                                    <div class="rating">
-                                        <p class="mb-0 text-warning">
-                                            <i class="fa-solid fa-star"></i
-                                            ><i class="fa-solid fa-star"></i
-                                            ><i class="fa-solid fa-star"></i
-                                            ><i class="fa-regular fa-star"></i
-                                            ><i class="fa-regular fa-star"></i>
-                                        </p>
-                                    </div>
-                                    <div class="">
-                                        <h4
-                                            id="product-name"
-                                            class="card-title pr-14"
-                                        >
-                                            Home Cooker
-                                        </h4>
-                                        <p class="mb-0">
-                                            <span id="price">59.00</span>TK
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-lg-9">
                         <div>
                             <h2 class="text-4xl fw-semibold py-4">
-                                Sportswear
+                                Kitchenware
                             </h2>
-                            <div class="d-flex">
-                                <div
-                                    class="card rounded-3 border-0 m-2 bg-body-secondary"
-                                    style="width: 18rem"
-                                >
+                            <div class="row">
+                                <div class="col-lg-4">
                                     <div
-                                        class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
+                                        onclick="handleProduct(this)"
+                                        class="card rounded-3 border-0 m-2 bg-body-secondary"
                                     >
-                                        <img
-                                            src="./images/prod4.png"
-                                            class="rounded px-3"
-                                            alt="..."
-                                        />
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="rating">
-                                            <p class="mb-0 text-warning">
-                                                <i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i>
-                                            </p>
+                                        <div
+                                            class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
+                                        >
+                                            <img
+                                                src="./images/prod1.png"
+                                                class="rounded px-3"
+                                                alt="..."
+                                            />
                                         </div>
-                                        <div class="">
+                                        <div class="card-body">
+                                            <div class="rating">
+                                                <p class="mb-0 text-warning">
+                                                    <i
+                                                        class="fa-solid fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-solid fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-solid fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-regular fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-regular fa-star"
+                                                    ></i>
+                                                </p>
+                                            </div>
+
                                             <h4
                                                 id="product-name"
                                                 class="card-title pr-14"
                                             >
-                                                Sports Back Cap
+                                                K. Accessories
                                             </h4>
                                             <p class="mb-0">
-                                                <span id="price">43.00</span>TK
+                                                <span id="price">35.00</span> TK
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="card rounded-3 border-0 m-2 bg-body-secondary"
-                                    style="width: 18rem"
-                                >
+                                <div class="col-lg-4">
                                     <div
-                                        class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
+                                        onclick="handleProduct(this)"
+                                        class="card rounded-3 border-0 m-2 bg-body-secondary"
                                     >
-                                        <img
-                                            src="./images/prod5.png"
-                                            class="rounded px-3"
-                                            alt="..."
-                                        />
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="rating">
-                                            <p class="mb-0 text-warning">
-                                                <i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i>
-                                            </p>
+                                        <div
+                                            class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
+                                        >
+                                            <img
+                                                src="./images/prod2.png"
+                                                class="rounded px-3"
+                                                alt="..."
+                                            />
                                         </div>
-                                        <div class="">
+                                        <div class="card-body">
+                                            <div class="rating">
+                                                <p class="mb-0 text-warning">
+                                                    <i
+                                                        class="fa-solid fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-solid fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-solid fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-regular fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-regular fa-star"
+                                                    ></i>
+                                                </p>
+                                            </div>
+
                                             <h4
                                                 id="product-name"
                                                 class="card-title pr-14"
                                             >
-                                                Full Jersey Set
+                                                C. Accessories
                                             </h4>
                                             <p class="mb-0">
-                                                <span id="price">69.00</span>TK
+                                                <span id="price">25.00</span> TK
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="card rounded-3 border-0 m-2 bg-body-secondary"
-                                    style="width: 18rem"
-                                >
+                                <div class="col-lg-4">
                                     <div
-                                        class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
+                                        onclick="handleProduct(this)"
+                                        class="card rounded-3 border-0 m-2 bg-body-secondary"
                                     >
-                                        <img
-                                            src="./images/prod6.png"
-                                            class="rounded px-3"
-                                            alt="..."
-                                        />
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="rating">
-                                            <p class="mb-0 text-warning">
-                                                <i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i>
-                                            </p>
+                                        <div
+                                            class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
+                                        >
+                                            <img
+                                                src="./images/prod3.png"
+                                                class="rounded px-3"
+                                                alt="..."
+                                            />
                                         </div>
-                                        <div class="">
+                                        <div class="card-body">
+                                            <div class="rating">
+                                                <p class="mb-0 text-warning">
+                                                    <i
+                                                        class="fa-solid fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-solid fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-solid fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-regular fa-star"
+                                                    ></i
+                                                    ><i
+                                                        class="fa-regular fa-star"
+                                                    ></i>
+                                                </p>
+                                            </div>
+
                                             <h4
                                                 id="product-name"
                                                 class="card-title pr-14"
                                             >
-                                                Sports cates
+                                                Home Cooker
                                             </h4>
                                             <p class="mb-0">
-                                                <span id="price">135.00</span>TK
+                                                <span id="price">59.00</span> TK
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <h2 class="text-4xl fw-semibold py-4">Furniture</h2>
-                            <div class="d-flex">
-                                <div
-                                    class="card rounded-3 border-0 m-2 bg-body-secondary"
-                                    style="width: 18rem"
-                                >
-                                    <div
-                                        class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
-                                    >
-                                        <img
-                                            src="./images/prod7.png"
-                                            class="rounded px-3"
-                                            alt="..."
-                                        />
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="rating">
-                                            <p class="mb-0 text-warning">
-                                                <i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i>
-                                            </p>
-                                        </div>
-                                        <div class="">
-                                            <h4
-                                                id="product-name"
-                                                class="card-title pr-14"
+                            <div>
+                                <h2 class="text-4xl fw-semibold py-4">
+                                    Sportswear
+                                </h2>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div
+                                            onclick="handleProduct(this)"
+                                            class="card rounded-3 border-0 m-2 bg-body-secondary"
+                                        >
+                                            <div
+                                                class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
                                             >
-                                                Single Relax Chair
-                                            </h4>
-                                            <p class="mb-0">
-                                                <span id="price">185.00</span>TK
-                                            </p>
+                                                <img
+                                                    src="./images/prod4.png"
+                                                    class="rounded px-3"
+                                                    alt="..."
+                                                />
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="rating">
+                                                    <p
+                                                        class="mb-0 text-warning"
+                                                    >
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i>
+                                                    </p>
+                                                </div>
+
+                                                <h4
+                                                    id="product-name"
+                                                    class="card-title pr-14"
+                                                >
+                                                    Sports Back Cap
+                                                </h4>
+                                                <p class="mb-0">
+                                                    <span id="price">43.00</span
+                                                    >TK
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div
+                                            onclick="handleProduct(this)"
+                                            class="card rounded-3 border-0 m-2 bg-body-secondary"
+                                        >
+                                            <div
+                                                class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
+                                            >
+                                                <img
+                                                    src="./images/prod5.png"
+                                                    class="rounded px-3"
+                                                    alt="..."
+                                                />
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="rating">
+                                                    <p
+                                                        class="mb-0 text-warning"
+                                                    >
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i>
+                                                    </p>
+                                                </div>
+
+                                                <h4
+                                                    id="product-name"
+                                                    class="card-title pr-14"
+                                                >
+                                                    Full Jersey Set
+                                                </h4>
+                                                <p class="mb-0">
+                                                    <span id="price">69.00</span
+                                                    >TK
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div
+                                            onclick="handleProduct(this)"
+                                            class="card rounded-3 border-0 m-2 bg-body-secondary"
+                                        >
+                                            <div
+                                                class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
+                                            >
+                                                <img
+                                                    src="./images/prod6.png"
+                                                    class="rounded px-3"
+                                                    alt="..."
+                                                />
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="rating">
+                                                    <p
+                                                        class="mb-0 text-warning"
+                                                    >
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i>
+                                                    </p>
+                                                </div>
+
+                                                <h4
+                                                    id="product-name"
+                                                    class="card-title pr-14"
+                                                >
+                                                    Sports cates
+                                                </h4>
+                                                <p class="mb-0">
+                                                    <span id="price"
+                                                        >135.00</span
+                                                    >TK
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="card rounded-3 border-0 m-2 bg-body-secondary"
-                                    style="width: 18rem"
-                                >
-                                    <div
-                                        class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
-                                    >
-                                        <img
-                                            src="./images/prod8.png"
-                                            class="rounded px-3"
-                                            alt="..."
-                                        />
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="rating">
-                                            <p class="mb-0 text-warning">
-                                                <i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i>
-                                            </p>
-                                        </div>
-                                        <div class="">
-                                            <h4
-                                                id="product-name"
-                                                class="card-title pr-14"
+                            </div>
+                            <div>
+                                <h2 class="text-4xl fw-semibold py-4">
+                                    Furniture
+                                </h2>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div
+                                            onclick="handleProduct(this)"
+                                            class="card rounded-3 border-0 m-2 bg-body-secondary"
+                                        >
+                                            <div
+                                                class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
                                             >
-                                                Children play
-                                            </h4>
-                                            <p class="mb-0">
-                                                <span id="price">235.00</span>TK
-                                            </p>
+                                                <img
+                                                    src="./images/prod7.png"
+                                                    class="rounded px-3"
+                                                    alt="..."
+                                                />
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="rating">
+                                                    <p
+                                                        class="mb-0 text-warning"
+                                                    >
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i>
+                                                    </p>
+                                                </div>
+
+                                                <h4
+                                                    id="product-name"
+                                                    class="card-title pr-14"
+                                                >
+                                                    Single Relax Chair
+                                                </h4>
+                                                <p class="mb-0">
+                                                    <span id="price"
+                                                        >185.00</span
+                                                    >TK
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div
-                                    class="card rounded-3 border-0 m-2 bg-body-secondary"
-                                    style="width: 18rem"
-                                >
-                                    <div
-                                        class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
-                                    >
-                                        <img
-                                            src="./images/prod9.png"
-                                            class="rounded px-3"
-                                            alt="..."
-                                        />
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="rating">
-                                            <p class="mb-0 text-warning">
-                                                <i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i class="fa-solid fa-star"></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i
-                                                ><i
-                                                    class="fa-regular fa-star"
-                                                ></i>
-                                            </p>
-                                        </div>
-                                        <div class="">
-                                            <h4
-                                                id="product-name"
-                                                class="card-title pr-14"
+                                    <div class="col-lg-4">
+                                        <div
+                                            onclick="handleProduct(this)"
+                                            class="card rounded-3 border-0 m-2 bg-body-secondary"
+                                        >
+                                            <div
+                                                class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
                                             >
-                                                Flexible Sofa
-                                            </h4>
-                                            <p class="mb-0">
-                                                <span id="price">339.00</span>TK
-                                            </p>
+                                                <img
+                                                    src="./images/prod8.png"
+                                                    class="rounded px-3"
+                                                    alt="..."
+                                                />
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="rating">
+                                                    <p
+                                                        class="mb-0 text-warning"
+                                                    >
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i>
+                                                    </p>
+                                                </div>
+
+                                                <h4
+                                                    id="product-name"
+                                                    class="card-title pr-14"
+                                                >
+                                                    Children play
+                                                </h4>
+                                                <p class="mb-0">
+                                                    <span id="price"
+                                                        >235.00</span
+                                                    >TK
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div
+                                            onclick="handleProduct(this)"
+                                            class="card rounded-3 border-0 m-2 bg-body-secondary"
+                                        >
+                                            <div
+                                                class="p-5 m-3 rounded-3 bg-white d-flex justify-content-center"
+                                            >
+                                                <img
+                                                    src="./images/prod9.png"
+                                                    class="rounded px-3"
+                                                    alt="..."
+                                                />
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="rating">
+                                                    <p
+                                                        class="mb-0 text-warning"
+                                                    >
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-solid fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i
+                                                        ><i
+                                                            class="fa-regular fa-star"
+                                                        ></i>
+                                                    </p>
+                                                </div>
+
+                                                <h4
+                                                    id="product-name"
+                                                    class="card-title pr-14"
+                                                >
+                                                    Flexible Sofa
+                                                </h4>
+                                                <p class="mb-0">
+                                                    <span id="price"
+                                                        >339.00</span
+                                                    >TK
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <!-- cart section  -->
-                    <section class="mt-lg-5 pt-5">
-                        <div class="p-4 bg-body-secondary rounded-3">
-                            <h4 class="fw-semibold text-xl">Have Coupon?</h4>
-                            <div class="input-group mb-3">
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="Recipient's username"
-                                    aria-label="Recipient's username"
-                                    aria-describedby="basic-addon2"
-                                />
-                                <button
-                                    class="input-group-text bg-warning"
-                                    id="apply-coupon"
-                                >
-                                    Apply
-                                </button>
-                            </div>
-                        </div>
-                        <div class="p-4 bg-body-secondary rounded-3 mt-3">
-                            <div class="order-list">
-                                <p class="fw-semibold">1. Home Cooker</p>
-                                <p class="fw-semibold">1. Home Cooker</p>
-                                <p class="fw-semibold">1. Home Cooker</p>
-                            </div>
-                            <hr />
-                            <div class="amount">
-                                <div class="order-list">
-                                    <p class="fw-semibold">
-                                        Total price: <span>257.00</span>TK
-                                    </p>
-                                    <p class="fw-semibold">
-                                        Discount: <span>257.00</span>TK
-                                    </p>
-                                    <p class="fw-semibold">
-                                        Total: <span>257.00</span>TK
-                                    </p>
+                    <div class="col-lg-3">
+                        <section class="mt-lg-5 pt-5">
+                            <div class="p-4 bg-body-secondary rounded-3">
+                                <h4 class="fw-semibold text-xl">
+                                    Have Coupon?
+                                </h4>
+                                <div class="input-group mb-3">
+                                    <input
+                                        type="text"
+                                        id="coupon"
+                                        class="form-control"
+                                        placeholder="Coupon code"
+                                        aria-label="Coupon code"
+                                        aria-describedby="basic-addon2"
+                                    />
+                                    <button
+                                        class="input-group-text border-0 btn btn-warning"
+                                        id="apply-coupon"
+                                        disabled
+                                    >
+                                        Apply
+                                    </button>
                                 </div>
                             </div>
-                            <hr />
-                            <button
-                                class="btn mt-2 btn-warning w-100 text-dark fw-semibold"
-                            >
-                                Make Purchase
-                            </button>
+                            <div class="p-4 bg-body-secondary rounded-3 mt-3">
+                                <h5 class="text-start ps-3 pt-2">
+                                    Product Name:
+                                </h5>
+                                <ol id="order-list"></ol>
+                                <hr />
+                                <div class="amount">
+                                    <div class="order-list ps-3">
+                                        <p class="fw-semibold">
+                                            Total price:
+                                            <span id="total-price">00</span> TK
+                                        </p>
+                                        <p class="fw-semibold">
+                                            Discount:
+                                            <span id="discount">00</span> TK
+                                        </p>
+                                        <p class="fw-semibold">
+                                            Total: <span id="total">00</span> TK
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr />
+                                <button
+                                    disabled
+                                    id="make-purchase"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"
+                                    class="btn mt-2 btn-warning w-100 text-dark fw-semibold"
+                                >
+                                    Make Purchase
+                                </button>
+                            </div>
+                        </section>
+                        <div
+                            class="modal fade"
+                            id="staticBackdrop"
+                            data-bs-backdrop="static"
+                            data-bs-keyboard="false"
+                            tabindex="-1"
+                            aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true"
+                        >
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div
+                                        class="modal-body d-flex align-items-center justify-content-center p-4"
+                                    >
+                                        <div class="text-center">
+                                            <img
+                                                src="./images/congo.png"
+                                                alt=""
+                                            />
+                                            <h1>Congratulations</h1>
+                                            <p>Your Purchase the product</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="modal-footer d-flex justify-content-center"
+                                    >
+                                        <button
+                                            type="button"
+                                            onclick="goHomepage()"
+                                            class="btn btn-warning"
+                                            data-bs-dismiss="modal"
+                                        >
+                                            Go Homepage
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
             </div>
         </main>
