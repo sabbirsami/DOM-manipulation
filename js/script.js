@@ -11,10 +11,12 @@ let total = 0;
 let discount = 0;
 
 function handleProduct(e) {
+    // GET VALUE
     const productName = e.childNodes[3].childNodes[3].innerText;
     const productPrice = parseFloat(
         e.childNodes[3].childNodes[5].childNodes[1].innerText
     );
+    // CREATE NEW lI FOR ORDER PRODUCT
     const orderedProduct = document.createElement("li");
     orderedProduct.innerText = productName;
     orderedProduct.classList.add("fw-semibold");
@@ -22,7 +24,7 @@ function handleProduct(e) {
     orderList.appendChild(orderedProduct);
     totalPrice = totalPrice + productPrice;
     total = total + productPrice;
-    console.log(totalPrice);
+
     if (total <= 0) {
         goHomepage();
     } else {
@@ -33,6 +35,7 @@ function handleProduct(e) {
     totalAmount.innerText = total;
 }
 
+// GET COUPON AND CHECK
 coupon.addEventListener("keyup", function () {
     const couponField = coupon.value;
     console.log(couponField);
